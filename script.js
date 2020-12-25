@@ -14,8 +14,10 @@ const calcChange = (totalMoney, drinkPrice) => {
 // console.log(calcChange(50, 7));
 // console.log(calcChange(68, 13));
 
-const getDrink = (totalMoney, drinkPrice) => {
-	return `
+const getDrink = () => {
+	let totalMoney = prompt('Enter how much money you have: ');
+	let drinkPrice = prompt('Enter the unit price of the drink: ');
+	return alert(`
     -"Hello Master, I have $${totalMoney} and drink's price is $${drinkPrice}"
     
     -Leave House
@@ -29,7 +31,7 @@ const getDrink = (totalMoney, drinkPrice) => {
     -"Hello Master, here is your $${calcChange(
 			totalMoney,
 			drinkPrice,
-		)} change"`;
+		)} change"`);
 };
 
-console.log(getDrink(1245, 27));
+getDrink();
